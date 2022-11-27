@@ -1,0 +1,4 @@
+#nodemodue
+node_modules
+#ignorando.env 
+.env

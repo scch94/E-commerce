@@ -1,0 +1,13 @@
+.contendor{
+    display: flex;
+    justify-content: center;
+    margin-top: 160px;
+
+}
+.contendor h1{
+    color: white;
+}
+.contenedor{
+    display: flex;
+    justify-content: center;
+}

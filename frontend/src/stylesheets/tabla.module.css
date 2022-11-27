@@ -1,0 +1,28 @@
+.tabla{
+    display: flex;
+    flex-direction: column;
+    color:white;
+    text-align: center;
+    align-items: center;
+    background-color: rgb(46, 8, 46);
+    opacity: 0.9;
+    margin-top: 20px;
+}
+.tabla button{
+    position: relative;
+}
+.imagens{
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+}
+body{
+    overflow-y: scroll !important;
+}
+
+/* .posicion{
+    top: 25%;
+}
+ */
+
+

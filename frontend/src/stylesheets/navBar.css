@@ -1,0 +1,46 @@
+.containers{
+    background-color: rgb(46, 8, 46);
+    color: white;
+    padding: 10px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.container .subcontainer{
+    width: 800px;
+    margin: 0 auto;
+}
+.container .subcontainer div{
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.nav-img{
+    width: 130px;
+}
+
+.nav-menu{
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+}
+
+.nav-menu a{
+    font-size: 1.3rem;
+    text-decoration: none;
+    color: #fdfdfd;
+    transition: .5s all;
+}
+
+.nav-menu img{
+    width: 50px;
+}
+
+.nav-menu a:hover{
+    color: #4ad295;
+}
+
+li{
+    list-style: none;
+}
