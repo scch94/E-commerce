@@ -22,7 +22,7 @@
   
 ## Back-end
 - Back end creado con bases de datos no relacional para hacer registro de usuarios y persistencia de productos.
-- Para realizar el CRUD desde el frontend creamos esta [API](https://devgroup.onrender.com/users) en la cual modificando el metodo y el path se realizan las actualizaciones de la base de datos
+- Para realizar el CRUD desde el frontend creamos esta [API](https://devgroup.onrender.com/users) a traves de ella se realizan las ditstintas consultas a la base de datos.
   
 ## como descargar proyecto 
   
@@ -33,7 +33,11 @@
 ```
 $ npm install
 ```
-  
+### 3. Inicar proyecto
+
+```
+$ npm start
+```  
 ## Autor
 
 ### Santiago Canal
