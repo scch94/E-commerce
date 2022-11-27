@@ -1,102 +1,42 @@
-# Individual Project - Henry Dogs
+<h1>E-commerce <h1/>
 
 <img src="https://user-images.githubusercontent.com/109535432/204139454-d09f4452-7d76-4360-9da9-02e451b0e175.PNG"   />
 
 ## Objetivos del Proyecto
 
-- Construir una App utlizando React, Redux, Node y Sequelize.
-- Afirmar y conectar los conceptos aprendidos en la carrera.
-- Aprender mejores prácticas.
-- Aprender y practicar el workflow de GIT.
+- SPA(single page application) utlizando React, Redux, Node.js, Express.js y mongoose.
+- simulador de tienda online con proteccion de rutas y control de roles atraves de un Login
+- Rol usuario: poder crear un usuario, elegir nuevos productos y realizar una compra
+- Rol admin: Ingresar a la app, editar productos, crear nuevos productos, y ver todas las ventas que se han realizado  
 
 ## Contenido
 
-Se cuenta con dos carpetas: `api` y `client`. En estas carpetas estará el código del back-end y el front-end respectivamente.
+-Se cuenta con dos carpetas: `Back-end` y `Front-end`. 
 
-## Descripción
+## Tecnologías utilizadas
+[![My Skills](https://skillicons.dev/icons?i=html,css,bootstrap,js,react,redux,nodejs,express,mongodb)](https://skillicons.dev)
 
-La aplicación permite vizualizar las distintas razas de perros de todo el mundo, junto con información relevante de las mismas utilizando la api externa [the dog api](https://thedogapi.com/) y a partir de ella poder, entre otras cosas:
+## Front-end 
+- Live site URL [Live](https://e-commerce-ten-swart-18.vercel.app/)
+- Si quieres ingresar con rol de administrador correo: `devgroup24@gmail.com`, contraseña: `123456789`
+  
+## Back-end
+- Back end creado con bases de datos no relacional para hacer registro de usuarios y persistencia de productos.
+- Para realizar el CRUD desde el frontend creamos esta [API](https://devgroup.onrender.com/users) en la cual modificando el metodo y el path se realizan las actualizaciones de la base de datos
+  
+## como descargar proyecto 
+  
+### 1. Clonar respositorio 
 
-- Buscar perros
-- Filtrarlos / Ordenarlos
-- Agregar nuevas razas de perros
+### 2. Instalar dependencias
 
-#### Tecnologías utilizadas
-- Javascript
-- HTML
-- CSS
-- React
-- Redux
-- Express
-- Sequelize - Postgres
+```
+$ npm install
+```
+  
+## Autor
 
-## Frontend
+### Santiago Canal
 
-__Pagina inicial__
+- GitHub - [@scch94](https://github.com/scch94)
 
-__Ruta principal__ consta de :
-
-- SearchBar para encontrar razas de perros por nombre
-- Listado de razas de perros, que indica:
-  - Imagen
-  - Nombre
-  - Temperamento
-  - Peso
-- Filtros por:
-  - Temperamento
-  - Raza existente (es decir las que vienen de la API) o agregada por nosotros (en la base de datos)
-- Ordenamiento tanto ascendentemente como descendentemente las razas de perro por:
-  - Orden alfabético
-  - Peso
-- Paginado para ir buscando y mostrando las siguientes razas, mostrando 8 razas por página.
-
-__Ruta de detalle de raza de perro__ consta de:
-
-- Imagen
-- Nombre
-- Temperamentos
-- Altura
-- Peso
-- Esperanza de vida
-
-__Ruta de creación de raza de perro__ contiene:
-
-- Un formulario __controlado con JavaScript__ con los siguientes campos:
-  - Nombre
-  - Altura (Diferenciando entre altura mínima y máxima)
-  - Peso (Diferenciando entre peso mínimo y máximo)
-  - Años de vida
-- Posibilidad de seleccionar/agregar uno o más temperamentos
-- Botón para crear una nueva raza de perro
-
-## Backend
-
-Se desarrollo un servidor en Node/Express con las siguientes rutas:
-
-- __GET /dogs__:
-  - Obtiene un listado de las razas de perro  
-- __GET /dogs?name="..."__:
-  - Obtiene un listado de las razas de perro que contengan la palabra ingresada como query parameter
-  - Si no existe coincidencia con ninguna raza de perro arroja el mensaje correspondiente
-- __GET /dogs/{idRaza}__:
-  - Obtiene todos los detalles de una raza de perro en particular
-- __POST /dogs__:
-  - Recibe los datos recolectados desde el formulario controlado de la ruta de creación de raza de perro por body
-  - Crea una raza de perro en la base de datos relacionada con sus temperamentos
-- __GET /temperaments__:
-  - Obtiene todos los temperamentos posibles
-  - En una primera instancia los obtiene desde la API externa y luego los guarda en la base de datos para utilizarlos posteriormente
-
-## Base de datos
-
-El modelo de la base de datos contiene las siguientes entidades:
-
-- Raza con las siguientes propiedades:
-  - ID
-  - Nombre 
-  - Altura 
-  - Peso 
-  - Años de vida
-- Temperamento con las siguientes propiedades:
-  - ID
-  - Nombre
