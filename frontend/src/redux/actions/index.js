@@ -1,7 +1,7 @@
 import axios from 'axios'
 export const getUsuarios=()=>dispatch=>{
     return(
-        fetch('https://devgroup.onrender.com/users')
+        fetch('https://santiagocanal.onrender.com/users')
         .then(response=>response.json())
         .then(respuesta=>dispatch({type:'GET_USUARIOS',payload:respuesta}))
     )

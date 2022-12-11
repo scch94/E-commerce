@@ -27,11 +27,11 @@ function App() {
     dispatch(actions.getUsuarios())
     console.log("hola",detail)
     console.log("entraste a la lista de productos")
-    axios.get("https://devgroup.onrender.com/ventas")
+    axios.get("http://localhost:4000/ventas")
     .then(response=>setVentas(response.data))
     .catch((error)=>console.log(error))
     console.log("entraste a la lista de productos")
-    axios.get("https://devgroup.onrender.com/products")
+    axios.get("http://localhost:4000/products")
     .then(response=>{
       console.log(response.data)
       setProductos(response.data)
@@ -155,7 +155,7 @@ function App() {
     setProductos(nuevo)
     axios({
       method: 'put',
-      url:`https://devgroup.onrender.com/products/${info._id}`,
+      url:`http://localhost:4000/products/${info._id}`,
       data:{
         id:info._id,
         nombre:info.nombre,
@@ -174,7 +174,7 @@ function App() {
     setProductos((prev)=>[...prev,...nuevo])
     axios({
       method:'post',
-      url:"https://devgroup.onrender.com/products/",
+      url:"http://localhost:4000/products/",
       data:info
     })
   }
@@ -183,7 +183,7 @@ function App() {
 
     
     setProductos(oldProductos => oldProductos.filter((p) => p._id !== id));
-    axios.delete(`https://devgroup.onrender.com/products/${id}`)
+    axios.delete(`http://localhost:4000/products/${id}`)
     .then(responde=>console.log(responde))
   }
   function onCarrito(id) {
@@ -228,7 +228,7 @@ function App() {
           nuevo[j].cantidad=nuevo[j].cantidad-1
           axios({
             method: 'put',
-            url:`https://devgroup.onrender.com/products/${nuevo[j]._id}`,
+            url:`http://localhost:4000/products/${nuevo[j]._id}`,
             data:{
               cantidad:nuevo[j].cantidad
             }
@@ -239,7 +239,7 @@ function App() {
     setProductos(nuevo)
     axios({
       method: 'post',
-      url:`https://devgroup.onrender.com/ventas`,
+      url:`http://localhost:4000/ventas`,
       data:info
     })
 
