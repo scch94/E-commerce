@@ -27,11 +27,11 @@ function App() {
     dispatch(actions.getUsuarios())
     console.log("hola",detail)
     console.log("entraste a la lista de productos")
-    axios.get("http://localhost:4000/ventas")
+    axios.get("https://santiagocanal.onrender.com/ventas")
     .then(response=>setVentas(response.data))
     .catch((error)=>console.log(error))
     console.log("entraste a la lista de productos")
-    axios.get("http://localhost:4000/products")
+    axios.get("https://santiagocanal.onrender.com/products")
     .then(response=>{
       console.log(response.data)
       setProductos(response.data)
@@ -155,7 +155,7 @@ function App() {
     setProductos(nuevo)
     axios({
       method: 'put',
-      url:`http://localhost:4000/products/${info._id}`,
+      url:`https://santiagocanal.onrender.com/products/${info._id}`,
       data:{
         id:info._id,
         nombre:info.nombre,
@@ -174,7 +174,7 @@ function App() {
     setProductos((prev)=>[...prev,...nuevo])
     axios({
       method:'post',
-      url:"http://localhost:4000/products/",
+      url:"https://santiagocanal.onrender.com/products/",
       data:info
     })
   }
@@ -183,7 +183,7 @@ function App() {
 
     
     setProductos(oldProductos => oldProductos.filter((p) => p._id !== id));
-    axios.delete(`http://localhost:4000/products/${id}`)
+    axios.delete(`https://santiagocanal.onrender.com/products/${id}`)
     .then(responde=>console.log(responde))
   }
   function onCarrito(id) {
@@ -228,7 +228,7 @@ function App() {
           nuevo[j].cantidad=nuevo[j].cantidad-1
           axios({
             method: 'put',
-            url:`http://localhost:4000/products/${nuevo[j]._id}`,
+            url:`https://santiagocanal.onrender.com/products/${nuevo[j]._id}`,
             data:{
               cantidad:nuevo[j].cantidad
             }
@@ -239,7 +239,7 @@ function App() {
     setProductos(nuevo)
     axios({
       method: 'post',
-      url:`http://localhost:4000/ventas`,
+      url:`https://santiagocanal.onrender.com/ventas`,
       data:info
     })
 
